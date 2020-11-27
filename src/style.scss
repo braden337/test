@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+$gutter: 1rem;
+
+@mixin breakpoint($point) {
+  @if $point == xl {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: 1250px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: 650px) {
+      @content;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: mediumaquamarine;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: $gutter;
+}
+
+body,
+main,
+article {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: $gutter;
+}
+
+pre,
+code {
+  font-family: "Source Code Pro", monospace;
+}
+
+body {
+  > header,
+  > footer {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+  }
+}
+
+body > header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+  }
+}
+
+main {
+  grid-column: 1/-1;
+
+  article {
+    grid-column: 1/-1;
+
+    @include breakpoint(md) {
+      grid-column: 2/-2;
+    }
+
+    > * {
+      grid-column: 1/-1;
+    }
+  }
+}
