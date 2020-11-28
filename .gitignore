@@ -7,5 +7,7 @@
 # Documentation here: https://yarnpkg.com/features/zero-installs
 # !/.yarn/cache
 /.pnp.*
-dist
+
+# Build files
 .parcel-cache
+dist
