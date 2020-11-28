@@ -10,20 +10,6 @@ html {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-body {
-  background-color: #ee6123;
-  color: #feefe5;
-  padding: 1rem;
-}
-
-body,
-main,
-article {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 1rem;
-}
-
 a:link, a:visited {
   color: inherit;
   text-decoration: none;
@@ -34,13 +20,27 @@ code {
   font-family: "Source Code Pro", monospace;
 }
 
-body > header,
-body > footer {
-  grid-column: 1/-1;
-  display: flex;
+body,
+main,
+article {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
+body {
+  background-color: #feefe5;
+  color: #011627;
+  grid-template-areas: "h h h h h h h" "m m m m m m m" "f f f f f f f";
+}
+body > header,
+body > footer {
+  display: flex;
+  padding: 1rem;
+}
 body > header {
+  background-color: #00916e;
+  color: #910023;
+  grid-area: h;
   justify-content: space-between;
   align-items: center;
 }
@@ -70,19 +70,29 @@ body > header nav ul li a {
 body > header nav ul li a:hover {
   border-bottom: 2px solid;
 }
+body > footer {
+  background-color: #ffcf00;
+  color: #0030ff;
+  grid-area: f;
+}
 
 main {
-  grid-column: 1/-1;
-}
-main article {
-  grid-column: 1/-1;
+  grid-area: m;
+  grid-template-areas: "a a a a a a a";
 }
 @media (min-width: 650px) {
-  main article {
-    grid-column: 2/-2;
+  main {
+    grid-template-areas: ". a a a a a .";
   }
+}
+main article {
+  background-color: #fa003f;
+  color: #00fabb;
+  grid-area: a;
+  padding: 1rem;
+  grid-gap: 1rem;
 }
 main article > * {
   grid-column: 1/-1;
 }
-/*# sourceMappingURL=main.d6633ca3.css.map */
+/*# sourceMappingURL=main.7f122468.css.map */
