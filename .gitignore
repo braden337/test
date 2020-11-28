@@ -9,5 +9,6 @@
 /.pnp.*
 
 # Build files
+node_modules
 .parcel-cache
 dist
