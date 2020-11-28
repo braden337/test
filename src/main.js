@@ -1,8 +1,8 @@
-import "./style.scss";
+import './style.scss';
 
-import moment from "moment";
+import moment from 'moment';
 
-let time = document.querySelector("time");
+let time = document.querySelector('time');
 
 let milliseconds = Number(time.dataset.milliseconds);
 
