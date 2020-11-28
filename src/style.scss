@@ -78,10 +78,18 @@ body {
       ul {
         list-style-type: none;
         display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
 
         li {
+          line-height: 2rem;
+
           + li {
-            margin-left: $gutter * 3;
+            margin-left: $gutter;
+
+            @include breakpoint(md) {
+              margin-left: $gutter * 4;
+            }
           }
 
           a {
