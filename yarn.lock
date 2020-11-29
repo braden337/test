@@ -7910,6 +7910,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"sweetalert2@npm:^10.10.4":
+  version: 10.10.4
+  resolution: "sweetalert2@npm:10.10.4"
+  checksum: f5e019935697da4f8a39991e11b8be86733c335f8d0674d02486aa9507276354a1c80cd30b2e107595466822092578f890fd3a0c106135f0bbc3fed48e1d38ad
+  languageName: node
+  linkType: hard
+
 "symbol-tree@npm:^3.2.2":
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
@@ -7975,6 +7982,7 @@ fsevents@~2.1.2:
     parcel: next
     rimraf: ^3.0.2
     sass: ^1.29.0
+    sweetalert2: ^10.10.4
   languageName: unknown
   linkType: soft
 
