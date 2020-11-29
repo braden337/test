@@ -95,4 +95,37 @@ main article {
 main article > * {
   grid-column: 1/-1;
 }
+main #contact {
+  padding: 1rem;
+  background-color: #00aacc;
+  color: #cc2200;
+  grid-column: 1/-1;
+}
+main #contact form {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-row-gap: 1rem;
+  grid-column-gap: 0.5rem;
+}
+main #contact form label {
+  grid-column: 1/3;
+  text-align: right;
+}
+main #contact form input,
+main #contact form textarea {
+  grid-column: 3/-1;
+}
+@media (min-width: 650px) {
+  main #contact form label {
+    grid-column: 1/3;
+    text-align: right;
+  }
+  main #contact form input,
+main #contact form textarea {
+    grid-column: 3/6;
+  }
+}
+main #contact form > * {
+  font-size: 1rem;
+}
 /*# sourceMappingURL=main.7f122468.css.map */
